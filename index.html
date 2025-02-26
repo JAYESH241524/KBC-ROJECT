@@ -10,13 +10,16 @@
         
     <div id="welcomeScreen">
         <div class="container">
-            <label for="in1">Enter Your User  Name</label>
+            <label for="userName">Enter Your User  Name</label>
             <input  id="userName" type="text" placeholder="Enter your user name.." id="in1">
-            <small class="error"></small>
-            <button>Start Game</button>
+            <small class="error" id="nameerror"></small>
+            <button  onclick="startGame()" >Start Game</button>
+        </div>
+        <div id="quizeArea" class="hide">
+            <p>quize area</p>
         </div>
 
     </div>
-    
+    <script src="/quize.js"></script>
 </body>
 </html>
