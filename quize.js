@@ -20,84 +20,84 @@ const levels=["₹10,00,000"
 ];
 const questionsList = [
     {
-        question: "What is the capital of France?",
-        options: ["Berlin", "Madrid", "Paris", "Rome"],
-        answer: "Paris"
+        question: "Which organelle is responsible for protein synthesis in a cell?",
+        options: ["Mitochondria", "Ribosome", "Golgi apparatus", "Lysosome"],
+        answer: "Ribosome"
     },
     {
-        question: "Who wrote the play 'Romeo and Juliet'?",
-        options: ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
-        answer: "William Shakespeare"
+        question: "What is the functional unit of the kidney?",
+        options: ["Nephron", "Neuron", "Alveoli", "Glomerulus"],
+        answer: "Nephron"
     },
     {
-        question: "Which planet is known as the Red Planet?",
-        options: ["Earth", "Venus", "Mars", "Jupiter"],
-        answer: "Mars"
+        question: "Which hormone regulates blood sugar levels?",
+        options: ["Insulin", "Adrenaline", "Thyroxine", "Glucagon"],
+        answer: "Insulin"
     },
     {
-        question: "What is the largest mammal in the world?",
-        options: ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        answer: "Blue Whale"
+        question: "Which gas is released during photosynthesis?",
+        options: ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+        answer: "Oxygen"
     },
     {
-        question: "How many continents are there in the world?",
-        options: ["5", "6", "7", "8"],
-        answer: "7"
+        question: "What is the main function of xylem in plants?",
+        options: ["Transport of water", "Transport of food", "Gas exchange", "Photosynthesis"],
+        answer: "Transport of water"
     },
     {
-        question: "Which gas do plants absorb from the atmosphere?",
-        options: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
-        answer: "Carbon Dioxide"
+        question: "Which part of the brain controls balance and coordination?",
+        options: ["Cerebrum", "Cerebellum", "Medulla", "Hypothalamus"],
+        answer: "Cerebellum"
     },
     {
-        question: "Who was the first Prime Minister of India?",
-        options: ["Mahatma Gandhi", "Jawaharlal Nehru", "Sardar Patel", "Dr. B.R. Ambedkar"],
-        answer: "Jawaharlal Nehru"
+        question: "What is the main structural component of the cell membrane?",
+        options: ["Proteins", "Lipids", "Carbohydrates", "Nucleic acids"],
+        answer: "Lipids"
     },
     {
-        question: "What is the currency of Japan?",
-        options: ["Yen", "Dollar", "Rupee", "Euro"],
-        answer: "Yen"
+        question: "Which enzyme breaks down starch into sugar?",
+        options: ["Pepsin", "Lipase", "Amylase", "Trypsin"],
+        answer: "Amylase"
     },
     {
-        question: "Which is the longest river in the world?",
-        options: ["Amazon", "Yangtze", "Nile", "Mississippi"],
-        answer: "Nile"
+        question: "Which blood vessels carry oxygenated blood from the heart to the body?",
+        options: ["Veins", "Arteries", "Capillaries", "Venules"],
+        answer: "Arteries"
     },
     {
-        question: "Which is the smallest country in the world?",
-        options: ["Vatican City", "Monaco", "Maldives", "Liechtenstein"],
-        answer: "Vatican City"
-    },{
-        question: "What is the capital of France?",
-        options: ["Berlin", "Madrid", "Paris", "Rome"],
-        answer: "Paris"
+        question: "Which process converts glucose into energy in the presence of oxygen?",
+        options: ["Photosynthesis", "Anaerobic respiration", "Glycolysis", "Aerobic respiration"],
+        answer: "Aerobic respiration"
     },
     {
-        question: "Who wrote the play 'Romeo and Juliet'?",
-        options: ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
-        answer: "William Shakespeare"
-    },
-    
-    {
-        question: "Which organ in the human body is responsible for detoxification?",
-        options: ["Liver", "Kidney", "Lungs", "Heart"],
-        answer: "Liver"
+        question: "Which biomolecule carries genetic information?",
+        options: ["Proteins", "Lipids", "DNA", "Carbohydrates"],
+        answer: "DNA"
     },
     {
-        question: "Which vitamin is produced when human skin is exposed to sunlight?",
-        options: ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
-        answer: "Vitamin D"
+        question: "Which part of the human digestive system absorbs the most nutrients?",
+        options: ["Stomach", "Large intestine", "Small intestine", "Esophagus"],
+        answer: "Small intestine"
     },
     {
-        question: "What is the primary function of red blood cells?",
-        options: ["Digest food", "Transport oxygen", "Fight infections", "Produce energy"],
-        answer: "Transport oxygen"
+        question: "What is the primary function of white blood cells?",
+        options: ["Oxygen transport", "Blood clotting", "Immunity", "Energy production"],
+        answer: "Immunity"
     },
     {
-        question: "how did u write your exam",
-        options: ["poor", "very good", "good", "average"],
-        answer: "very good"
+        question: "Which type of reproduction involves the fusion of gametes?",
+        options: ["Asexual reproduction", "Binary fission", "Budding", "Sexual reproduction"],
+        answer: "Sexual reproduction"
+    },
+    {
+        question: "What is the process by which plants lose water in the form of vapor?",
+        options: ["Respiration", "Photosynthesis", "Transpiration", "Osmosis"],
+        answer: "Transpiration"
+    },
+    {
+        question: "Which part of the neuron receives signals from other neurons?",
+        options: ["Axon", "Dendrites", "Synapse", "Myelin sheath"],
+        answer: "Dendrites"
     }
 ];
 
