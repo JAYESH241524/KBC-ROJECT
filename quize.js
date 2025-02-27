@@ -1,5 +1,6 @@
 const welcomeScreen=document.getElementById("welcomeScreen");
 const quizeArea=document.getElementById("quizeArea");
+const resultPage=document.getElementById("resultPage");
 
 const levels=["₹10,00,000"
     ,"₹5,00,000"
@@ -67,10 +68,44 @@ const questionsList = [
         question: "Which is the smallest country in the world?",
         options: ["Vatican City", "Monaco", "Maldives", "Liechtenstein"],
         answer: "Vatican City"
+    },{
+        question: "What is the capital of France?",
+        options: ["Berlin", "Madrid", "Paris", "Rome"],
+        answer: "Paris"
+    },
+    {
+        question: "Who wrote the play 'Romeo and Juliet'?",
+        options: ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
+        answer: "William Shakespeare"
+    },
+    {
+        question: "Which planet is known as the Red Planet?",
+        options: ["Earth", "Venus", "Mars", "Jupiter"],
+        answer: "Mars"
+    },
+    {
+        question: "What is the largest mammal in the world?",
+        options: ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
+        answer: "Blue Whale"
+    },
+    {
+        question: "How many continents are there in the world?",
+        options: ["5", "6", "7", "8"],
+        answer: "7"
+    },
+    {
+        question: "how did u write your exam",
+        options: ["poor", "very good", "good", "average"],
+        answer: "very good"
     }
 ];
+
+
 let currentQuestion=1;
 let currentOptions=questionsList[currentQuestion].options;
+let currentAnswer=questionsList[currentQuestion].answer;
+
+
  function startGame(){
     const userName=document.getElementById("userName").value;
     const error=document.getElementById("nameerror");
@@ -84,6 +119,7 @@ let currentOptions=questionsList[currentQuestion].options;
     
     
  }
+ 
  function setLevels(){
     const levelList=document.getElementById("levelList");
     levels.forEach((level,index)=>{
@@ -105,10 +141,85 @@ let currentOptions=questionsList[currentQuestion].options;
     const questionArea=document.getElementById("questionArea");
     let q=document.createElement("div");
     q.classList.add("question");
-    q.innerHTML=`<span>${questionsList[currentQuestion-1].question}</span>`;
+    q.innerHTML=`${questionsList[currentQuestion].question}s`;
     questionArea.appendChild(q);
     
+    const optionContainer=document.createElement("div");
+    optionContainer.classList.add("optionContainer");
+    
+    
+    currentOptions.forEach((option,index)=>{
+        let op=document.createElement("div");
+        op.classList.add("option");
+        op.innerHTML=`${option}`;
+        optionContainer.appendChild(op);
+    });
+    questionArea.appendChild(optionContainer)
 
 
  }
  setQuestions();
+let levelListItems=document.getElementsByClassName("levelListItems");
+function checkAnswer(){
+    
+    let optionList=document.getElementsByClassName("option");
+    for(let i=0;i<4;i++){
+        
+        optionList[i].addEventListener('click',
+            ()=>{
+                if(currentAnswer===optionList[i].innerHTML && currentQuestion<=14 ){
+                    let q=document.querySelector(".question");
+                    let op=document.getElementsByClassName("option");
+                    currentQuestion++;
+                    q.innerHTML=(questionsList[currentQuestion].question);
+                    
+                    for(let k=0;k<4;k++){
+                        op[k].innerHTML=(questionsList[currentQuestion].options[k]);
+                    }
+                    currentAnswer=questionsList[currentQuestion].answer;
+
+                    (levelListItems[levels.length-(currentQuestion-1)]).classList.remove("activeLevel");
+
+                   (levelListItems[levels.length-(currentQuestion)]).classList.add("activeLevel");
+
+                    
+
+
+                   
+                }else if(currentQuestion===15){
+                    const winAmount=document.getElementById("winAmount");
+                    const feedBack=document.createElement("div");
+                    winAmount.innerHTML=`win amount: ${levels[levels.length-(currentQuestion)]}`;
+                    feedBack.innerHTML="you won kbc";
+
+                }
+                else{
+                    const winAmount=document.getElementById("winAmount");
+                    const feedBack=document.createElement("div");
+                    feedBack.classList.add("feedBack");
+                    if(currentQuestion==1){
+                        winAmount.innerHTML="win amount: ₹ 0";
+                        feedBack.innerHTML="Better luck time";
+                    }
+                    else if(currentQuestion>1 && currentQuestion<=10){
+                        winAmount.innerHTML=`win amount: ${levels[levels.length-(currentQuestion)]}`
+                        feedBack.innerHTML="nice played";
+                    }
+                    else if(currentQuestion>10 && currentQuestion<=13){
+                        winAmount.innerHTML=`win amount: ${levels[levels.length-(currentQuestion)]}`
+                        feedBack.innerHTML="amazing play";
+                    }
+                    else{
+                        winAmount.innerHTML=`win amount: ${levels[levels.length-(currentQuestion)]}`
+                        feedBack.innerHTML="you won kbc";
+                    }
+                    
+                    quizeArea.classList.add("hide");
+                    resultPage.classList.remove("hide")
+
+                }
+            })
+    }
+    
+}
+checkAnswer()
