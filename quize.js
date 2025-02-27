@@ -78,20 +78,21 @@ const questionsList = [
         options: ["Charles Dickens", "William Shakespeare", "Jane Austen", "Mark Twain"],
         answer: "William Shakespeare"
     },
+    
     {
-        question: "Which planet is known as the Red Planet?",
-        options: ["Earth", "Venus", "Mars", "Jupiter"],
-        answer: "Mars"
+        question: "Which organ in the human body is responsible for detoxification?",
+        options: ["Liver", "Kidney", "Lungs", "Heart"],
+        answer: "Liver"
     },
     {
-        question: "What is the largest mammal in the world?",
-        options: ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        answer: "Blue Whale"
+        question: "Which vitamin is produced when human skin is exposed to sunlight?",
+        options: ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+        answer: "Vitamin D"
     },
     {
-        question: "How many continents are there in the world?",
-        options: ["5", "6", "7", "8"],
-        answer: "7"
+        question: "What is the primary function of red blood cells?",
+        options: ["Digest food", "Transport oxygen", "Fight infections", "Produce energy"],
+        answer: "Transport oxygen"
     },
     {
         question: "how did u write your exam",
@@ -186,7 +187,7 @@ function checkAnswer(){
 
 
                    
-                }else if(currentQuestion===15){
+                }else if(currentQuestion>15){
                     const winAmount=document.getElementById("winAmount");
                     const feedBack=document.createElement("div");
                     winAmount.innerHTML=`win amount: ${levels[levels.length-(currentQuestion)]}`;
@@ -216,6 +217,7 @@ function checkAnswer(){
                     
                     quizeArea.classList.add("hide");
                     resultPage.classList.remove("hide")
+                    winAmount.appendChild(feedBack);
 
                 }
             })
