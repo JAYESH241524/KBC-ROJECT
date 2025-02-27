@@ -112,3 +112,20 @@
     padding: 4px;
     width: 95%;
 }
+
+#questionArea{
+    display: flex;
+    justify-content: center;
+    align-items: middle;
+}
+.question{
+    background: linear-gradient(#100241,black);
+    width: 75%;
+    height: 10vh;
+    border: 2px solid white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
