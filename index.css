@@ -6,6 +6,7 @@
     width: 100%;
     height: 100vh;
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image:url("/kbcbg.gif");
@@ -65,5 +66,49 @@
     display:none !important
 }
 #quizeArea{
-    background:#100241;
+    display:flex;
+    width: 100%;
+    height: 100vh;
+}
+#questionArea{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    width: 75%;
+    height: 100vh;
+    display: flex;  /* To center content */
+    justify-content: center;
+    align-items: center;
+    background-image:url("/kbcbg.gif");
+    color: white; /* Ensuring text is visible */
+}
+#levelArea{
+    width: 25%;
+    height: 100vh;
+    background-color: #22074d;;
+}
+#levelList{
+    display: flex;
+    flex-direction:column;
+    color: whitesmoke;
+    list-style: none;
+    justify-content: center;
+    align-items: start;
+    padding-left: 20px;
+    font-size: 1.5rem;
+   
+
+}
+.levelListItems{
+    display: flex;
+    padding:auto;
+    gap: 50px;
+    padding: 10px 0px;    
+    
+}
+.activeLevel{
+    background-color: rgb(32, 147, 109);
+    border-radius: 7px;
+    padding: 4px;
+    width: 95%;
 }

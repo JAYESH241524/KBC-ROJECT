@@ -8,17 +8,21 @@
 </head>
 <body>
         
-    <div id="welcomeScreen">
+    <div id="welcomeScreen" class="hide">
         <div class="container">
             <label for="userName">Enter Your User  Name</label>
             <input  id="userName" type="text" placeholder="Enter your user name.." id="in1">
             <small class="error" id="nameerror"></small>
             <button  onclick="startGame()" >Start Game</button>
         </div>
-        <div id="quizeArea" class="hide">
-            <p>quize area</p>
-        </div>
+    </div>
+    <div id="quizeArea" >
+        <div id="questionArea"></div>
+        <div id="levelArea">
+                <ul id="levelList">
 
+                </ul>
+        </div>
     </div>
     <script src="/quize.js"></script>
 </body>
